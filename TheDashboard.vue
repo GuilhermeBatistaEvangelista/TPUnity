@@ -6,13 +6,12 @@
         <div class="card flex justify-center">
             <Button label="agendar " raised @click="visible = true" />
         </div>
-        <Dialog v-model:visible="visible" modal dismissableMask header="Agendar" :pt="{
+        <Dialog class="bg-rose-100 text-black dark:bg-zinc-200 dark:text-white" v-model:visible="visible" modal dismissableMask header="Agendar" :pt="{
             root: 'border-none',
-            mask: { style: 'background:rgba(0, 0, 0, 0.05); backdrop-filter: blur(1px)' },
-            header: {style: 'background:rgb(255, 255, 255)'}
+            mask: { style: 'background:rgba(0, 0, 0, 0.05); backdrop-filter: blur(1px)' }
         }">
             <template #container="{ closeCallback } ">
-                <div class="dialogo flex flex-auto">
+                <div class="flex-auto text-center">
                     <label for="calendar-timeonly" class="font-bold block mb-2"> Hora: </label>
                     <Calendar id="calendar-timeonly" v-model="time" timeOnly stepMinute="30"/>
                 </div>
@@ -48,9 +47,5 @@ button {
     border-width: 2px;
     margin-right: 4px;
     border-radius: 10%;
-}
-
-.dialogo {
-    background-color: grey;
 }
 </style>

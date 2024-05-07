@@ -1,31 +1,39 @@
 <template>
-    <header>
-      <nav >
-        <RouterLink to="/"><button>Home</button></RouterLink>
-        <RouterLink to="/login"><button>Login</button></RouterLink>
-      </nav>
-    </header>
+  <header>
+    <nav>
+      <darkMode />
+      <RouterLink to="/"><button>Home</button></RouterLink>
+      <RouterLink to="/login"><button>Login</button></RouterLink>
+    </nav>
+  </header>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import darkMode from '../components/darkMode.vue';
+</script>
+
+<style setup scoped>
 header {
   line-height: 1.5;
   height: 10vh;
-  background-color: aquamarine;
-  place-content: end;
+  background-color: #436D87;
+  place-content: center;
 }
-nav{
+
+nav {
   height: 75%;
   width: 15%;
   margin-left: 85%;
 }
-button{
+
+button {
   height: 80%;
-  width: 40%;
+  min-height: 16px;
+  width: 30%;
   align-content: center;
   background-color: rgb(187, 248, 228);
-  border-color:  rgb(62, 216, 165);
   border-radius: 10%;
   margin-right: 4px;
+  font-size:3vh;
 }
 </style>

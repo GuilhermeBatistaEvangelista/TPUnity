@@ -1,6 +1,6 @@
 <template>
-    <TheHeader />
-    <div class="content bg-white text-black dark:bg-zinc-800 dark:text-white">
+    <div class="min-h-screen flex-auto bg-white text-black dark:bg-zinc-800 dark:text-white">
+        <TheHeader />
         <RouterView />
     </div>
 </template>
@@ -11,9 +11,3 @@ import TheHeader from './components/TheHeader.vue'
 
 
 </script>
-
-<style>
-.content{
-    height:90vh;
-}
-</style>
